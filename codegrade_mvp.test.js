@@ -89,7 +89,7 @@ describe('server.js', () => {
     }, 750)
     it('[12] kullanıcı giriş yapmdıysa doğru mesaj', async () => {
       let res = await request(server).get('/api/auth/logout')
-      expect(res.body.message).toMatch(/no session/i)
+      expect(res.body.message).toMatch(/oturum bulunamadı/i)
     }, 750)
   })
   describe('[GET] /api/users', () => {
