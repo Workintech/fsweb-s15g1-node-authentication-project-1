@@ -85,18 +85,18 @@ describe('server.js', () => {
       expect(res.body.message).toMatch(/yapildi/i)
       res = await request(server).get('/api/users')
         .set('Cookie', `${cikolatacips.name}=${cikolatacips.value}`)
-      expect(res.body.message).toMatch(/Geçemezsiniz/i)
+      expect(res.body.message).toMatch(/Geçemezsiniz!/i)
     }, 750)
     it('[12] kullanıcı giriş yapmdıysa doğru mesaj', async () => {
       let res = await request(server).get('/api/auth/logout')
-      expect(res.body.message).toMatch(/oturum bulunamadı/i)
+      expect(res.body.message).toMatch(/Oturum bulunamadı!/i)
     }, 750)
   })
   describe('[GET] /api/users', () => {
     it('[13] kullanıcı giriş yapmadıysa doğru mesaj ve durum kodu', async () => {
       const res = await request(server).get('/api/users')
       expect(res.status).toBe(401)
-      expect(res.body.message).toMatch(/Geçemezsiniz/i)
+      expect(res.body.message).toMatch(/Geçemezsiniz!/i)
     }, 750)
     it('[14] oturumla eşleşen bir "cikolatacips" cookiesi varsa ', async () => {
       let res = await request(server).post('/api/auth/login').send({ username: 'bob', password: '1234' })
