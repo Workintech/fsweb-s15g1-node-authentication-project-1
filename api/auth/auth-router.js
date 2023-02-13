@@ -6,22 +6,22 @@
   1 [POST] /api/auth/register { "username": "sue", "password": "1234" }
 
   response:
-  durum 200
+  status: 200
   {
     "user_id": 2,
     "username": "sue"
   }
 
   response username alınmış:
-  durum 422
+  status: 422
   {
-    "mesaj": "Username kullaniliyor"
+    "message": "Username kullaniliyor"
   }
 
   response şifre 3 ya da daha az karakterli:
-  durum 422
+  status: 422
   {
-    "mesaj": "Şifre 3 karakterden fazla olmalı"
+    "message": "Şifre 3 karakterden fazla olmalı"
   }
  */
 
@@ -30,15 +30,15 @@
   2 [POST] /api/auth/login { "username": "sue", "password": "1234" }
 
   response:
-  durum 200
+  status: 200
   {
-    "mesaj": "Hoşgeldin sue!"
+    "message": "Hoşgeldin sue!"
   }
 
   response geçersiz kriter:
-  durum 401
+  status: 401
   {
-    "mesaj": "Geçersiz kriter"
+    "message": "Geçersiz kriter!"
   }
  */
 
@@ -47,15 +47,15 @@
   3 [GET] /api/auth/logout
 
   response giriş yapmış kullanıcılar için:
-  durum 200
+  status: 200
   {
-    "mesaj": "çıkış yapildi"
+    "message": "Çıkış yapildi"
   }
 
   response giriş yapmamış kullanıcılar için:
-  durum 200
+  status: 200
   {
-    "mesaj": "oturum bulunamadı"
+    "message": "Oturum bulunamadı!"
   }
  */
 
