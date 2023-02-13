@@ -1,9 +1,9 @@
 /*
   Kullanıcının sunucuda kayıtlı bir oturumu yoksa
 
-  durum 401
+  status: 401
   {
-    "mesaj": "Geçemezsiniz!"
+    "message": "Geçemezsiniz!"
   }
 */
 function sinirli() {
@@ -13,9 +13,9 @@ function sinirli() {
 /*
   req.body de verilen username halihazırda veritabanında varsa
 
-  durum 422
+  status: 422
   {
-    "mesaj": "Username kullaniliyor"
+    "message": "Username kullaniliyor"
   }
 */
 function usernameBostami() {
@@ -25,9 +25,9 @@ function usernameBostami() {
 /*
   req.body de verilen username veritabanında yoksa
 
-  durum 401
+  status: 401
   {
-    "mesaj": "Geçersiz kriter"
+    "message": "Geçersiz kriter"
   }
 */
 function usernameVarmi() {
@@ -37,9 +37,9 @@ function usernameVarmi() {
 /*
   req.body de şifre yoksa veya 3 karakterden azsa
 
-  durum 422
+  status: 422
   {
-    "mesaj": "Şifre 3 karakterden fazla olmalı"
+    "message": "Şifre 3 karakterden fazla olmalı"
   }
 */
 function sifreGecerlimi() {
