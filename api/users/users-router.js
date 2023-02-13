@@ -1,4 +1,4 @@
-// `sinirli` middlewareını `auth-middleware.js` dan require edin. Buna ihtiyacınız olacak!
+// `sinirli` middleware'ını `auth-middleware.js` dan require edin. Buna ihtiyacınız olacak!
 
 
 /**
@@ -8,7 +8,7 @@
   ulaşabilir.
 
   response:
-  durum 200
+  status: 200
   [
     {
       "user_id": 1,
@@ -18,9 +18,9 @@
   ]
 
   response giriş yapılamadıysa:
-  durum 401
+  status: 401
   {
-    "mesaj": "Geçemezsiniz!"
+    "message": "Geçemezsiniz!"
   }
  */
 
