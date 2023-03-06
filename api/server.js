@@ -11,7 +11,7 @@ const cors = require("cors");
   Kimlik doğrulaması yapan kullanıcıların sunucuda kalıcı bir oturumu ve istemci tarafında bir cookiesi olmalıdır,
   Cookienin adı "cikolatacips" olmalıdır.
 
-  Oturum ramde tutulabilir (canlı üründe uygun olmaz)
+  Oturum memory'de tutulabilir (Production ortamı için uygun olmaz)
   veya "connect-session-knex" gibi bir oturum deposu kullanabilirsiniz.
  */
 
