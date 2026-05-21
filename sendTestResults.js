@@ -32,7 +32,7 @@ User id'nizi nextgen'de projeye tıkladığınızda görebilirsiniz.
 
   try {
     const response = await fetch(
-      "https://coursey-gpt-backend.herokuapp.com/nextgen/taskLog/saveJavaTasks",
+      "https://backend.api.workintech.com.tr/nextgen/taskLog/saveJavaTasks",
       {
         method: "POST",
         headers: {
